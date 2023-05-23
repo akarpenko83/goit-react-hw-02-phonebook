@@ -1,6 +1,6 @@
 export default function Section() {
     return (
-        <section title="">
+        <section>
             <h1>Phonebook</h1>
         </section>
     );
