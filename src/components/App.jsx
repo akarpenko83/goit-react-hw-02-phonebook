@@ -5,7 +5,7 @@ import ContactForm from './phonebook/ContactForm';
 import ContactList from './phonebook/ContactList';
 import Filter from './phonebook/Filter';
 import { SectionName } from './phonebook/Phonebook.styled';
-
+import background from './utils/background';
 class App extends Component {
     state = {
         contacts: INITIAL_CONTACTS,
@@ -51,6 +51,7 @@ class App extends Component {
     };
 
     render() {
+        window.onload = background;
         return (
             <Container>
                 <SectionName>Phonebook</SectionName>
