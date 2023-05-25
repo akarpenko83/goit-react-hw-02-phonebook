@@ -1,11 +1,19 @@
 import styled from '@emotion/styled';
 
+export const SectionName = styled.h1`
+    text-transform: uppercase;
+`;
+
 export const Container = styled.section`
+    position: absolute;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     width: 20vw;
-    height: 100%;
+    /* height: 100%; */
     outline: solid 1px lightgray;
+    left: 50%;
+    transform: translate(-50%);
     margin: 0 auto;
     margin-top: 3rem;
     padding: 2rem;

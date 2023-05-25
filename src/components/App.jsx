@@ -4,6 +4,7 @@ import INITIAL_CONTACTS from './phonebook/initContacts.json';
 import ContactForm from './phonebook/ContactForm';
 import ContactList from './phonebook/ContactList';
 import Filter from './phonebook/Filter';
+import { SectionName } from './phonebook/Phonebook.styled';
 
 class App extends Component {
     state = {
@@ -52,7 +53,7 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <h1>Phonebook</h1>
+                <SectionName>Phonebook</SectionName>
                 <ContactForm onSubmit={this.onSubmit} />
                 <h2>Contacts</h2>
                 <Filter

@@ -1,5 +1,21 @@
 @import-normalize; /* bring in normalize.css styles */
+html,
+body {
+    margin: 0;
 
+    padding: 0;
+}
+.background {
+    position: relative;
+
+    display: block;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 0;
+}
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont,
