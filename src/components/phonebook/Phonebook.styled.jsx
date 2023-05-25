@@ -10,12 +10,9 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     width: 20vw;
-    /* height: 100%; */
-    outline: solid 1px lightgray;
     left: 50%;
-    transform: translate(-50%);
-    margin: 0 auto;
-    margin-top: 3rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
     padding: 2rem;
     align-items: center;
     background-color: lightgray;
