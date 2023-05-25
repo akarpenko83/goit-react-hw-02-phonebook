@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Form } from './Phonebook.styled';
+import {
+    Form,
+    FormGroup,
+    Button,
+} from './Phonebook.styled';
 
 export default class ContactForm extends Component {
     state = {
@@ -18,9 +22,6 @@ export default class ContactForm extends Component {
     handleSubmit = evt => {
         evt.preventDefault();
         const form = evt.currentTarget;
-        // const name = form.elements.name.value;
-        // const number = form.elements.number.value;
-        // const id = nanoid();
         const contact = {
             id: nanoid(),
             name: form.elements.name.value,
@@ -32,17 +33,18 @@ export default class ContactForm extends Component {
     };
 
     handleChange = evt => {
-        this.setState({ name: evt.target.value });
+        this.setState({ name: evt.target.value.trim() });
     };
 
     render() {
         return (
             <>
                 <Form onSubmit={this.handleSubmit}>
-                    <label>
+                    <FormGroup>
                         Name
                         <input
                             value={this.state.name}
+                            placeholder="John Doe"
                             onChange={this.handleChange}
                             type="text"
                             name="name"
@@ -50,20 +52,21 @@ export default class ContactForm extends Component {
                             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                             required
                         />
-                    </label>
-                    <label>
+                    </FormGroup>
+                    <FormGroup>
                         Number
                         <input
                             type="tel"
+                            placeholder="050-000-00-00"
                             name="number"
                             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                             required
                         />
-                    </label>
-                    <button type="submit">
+                    </FormGroup>
+                    <Button type="submit">
                         Add contact
-                    </button>
+                    </Button>
                 </Form>
             </>
         );

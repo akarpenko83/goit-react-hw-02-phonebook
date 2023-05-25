@@ -1,8 +1,8 @@
-// import { Component } from 'react';
-
+import PropTypes from 'prop-types';
+import { FilterContainer } from './Phonebook.styled';
 export default function Filter({ value, onChange }) {
     return (
-        <label>
+        <FilterContainer>
             Find contact by name
             <input
                 value={value.name}
@@ -13,6 +13,11 @@ export default function Filter({ value, onChange }) {
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
             />
-        </label>
+        </FilterContainer>
     );
 }
+
+Filter.propTypes = {
+    value: PropTypes.string,
+    onChange: PropTypes.func.isRequired,
+};
