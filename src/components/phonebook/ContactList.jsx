@@ -9,22 +9,20 @@ export default function ContactList({
     return (
         <div>
             <ul>
-                {contacts.map(
-                    ({ name, number, id = nanoid() }) => (
-                        <li key={id}>
-                            {name}: {number}
-                            {'   '}
-                            <button
-                                type="button"
-                                onClick={() =>
-                                    onRemoveContact(id)
-                                }
-                            >
-                                Delete
-                            </button>
-                        </li>
-                    ),
-                )}
+                {contacts.map(({ name, number, id }) => (
+                    <li key={nanoid()}>
+                        {name}: {number}
+                        {'   '}
+                        <button
+                            type="button"
+                            onClick={() =>
+                                onRemoveContact(id)
+                            }
+                        >
+                            Delete
+                        </button>
+                    </li>
+                ))}
             </ul>
         </div>
     );
