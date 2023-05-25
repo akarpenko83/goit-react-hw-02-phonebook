@@ -7,12 +7,12 @@ export const SectionName = styled.h1`
 export const Container = styled.section`
     position: absolute;
     z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
     padding: 2rem;
     align-items: center;
     background-color: lightgray;
